@@ -1,0 +1,24 @@
+.wrapper{
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.card{
+  width: 280px;
+  padding: 14px;
+  transition: .3s;
+  border: 1px solid gray;
+}
+.card:hover {
+  box-shadow: 0 0 8px #0002, 15px 15px 15px #0001;
+}
+.sevimli {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(255, 0, 0);
+  padding-top: 150px;
+} 
+.btn {
+  padding: 5px 32px;
+}

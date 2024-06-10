@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.card {
+  width: 250px;
+  height: 380px;
+  padding: 14px;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  transition: 0.5s;
+}
+.img {
+  width: 200px;
+}
+.card__title {
+    font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  /* top: 310px; */
+  font-size: 16px;
+  position: absolute;
+  font-weight: 700;
+}
+.card img {
+  width: 200px;
+  padding-left: 20px;
+  height: 200px;
+  object-fit: contain;
+}
+.title {
+  padding-top: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+.wish {
+  padding: 12px 10px 8px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 50%;
+  text-align: center;
+}
+.text {
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  /* top: 310px; */
+  font-size: 16px;
+  position: absolute;
+  font-weight: 400;
+}
+.wish svg {
+  color: red;
+  font-size: 16px;
+}
+.wish {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.card__btn {
+    display: flex;
+    justify-content: space-between;
+
+}
+.car {
+  margin-top: 110px;
+  width: 100%;
+  padding: 3px;
+  border-radius: 10px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  font-size: 20px;
+}
+.card__btn {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  display: none;
+}
+.card__btn.show {
+  display: block;
+  display: flex;
+}
