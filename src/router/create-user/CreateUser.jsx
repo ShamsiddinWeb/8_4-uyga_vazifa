@@ -1,62 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CreateUser.css";
 import { useDispatch } from "react-redux";
 import { addToUsers } from "../../context/usersSlice";
 
 function CreateUser() {
-  const [name, setName] = useState("");
-  const [professio, setProfessio] = useState("");
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let newUser = {
-      id: new Date().getTime(),
-      name,
-      professio,
-      age: +age,
-      gender,
-    };
+    let formData = new FormData(event.target)
+    let newUser = Object.fromEntries(formData.entries())
     dispatch(addToUsers(newUser));
-    setName("");
-    setAge("");
-    setGender("");
-    setProfessio("");
+    event.target.reset()
   };
   return (
     <div className="create__user">
       <h2>Create User</h2>
       <form onSubmit={handleSubmit} className="create__user-form" action="">
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="name"
-          required
-        />
-        <input
-          value={professio}
-          onChange={(e) => setProfessio(e.target.value)}
-          type="text"
-          required
-          placeholder="profession"
-        />
-        <input
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-          type="number"
-          required
-          placeholder="age"
-        />
-        <select
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-          name=""
-          required
-          id=""
-        >
+        <input type="text" name="name" placeholder="name" required />
+        <input type="text" name="profession" required placeholder="profession" />
+        <input  type="number" name="age" required placeholder="age" />
+        <select name="" required id="">
           <option value="">gender</option>
           <option value="male">male</option>
           <option value="female">female</option>
